@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HEART DISEASE PREDICTION</title>
+        <link rel="stylesheet" type="text/css" href="/Static/style.css">
+    </head>
+            <body>
+                <div class="container">
+                    <div class="title">HEART DISEASE PREDICTION</div>
+                   <form action="{{ url_for('predict')}}"method="post">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Age</span>
+                            <input type="text" name="age" placeholder="Age" required="required" />
+                        </div>
+                        <div class="input-box">
+                            <span class="details">sex</span>
+                            <input type="text" name="sex" placeholder="Gender" required="required" />
+                        </div>
+                        <div class="input-box">
+                            <span class="details">cp</span>
+                            <input type="text" name="cp" placeholder="Chest pain type" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">threstbps</span>
+                            <input type="text" name="threstbps" placeholder="Resting blood pressure" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">chol</span>
+                            <input type="text" name="chol" placeholder="Cholestrole" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">fbs</span>
+                            <input type="text" name="fbs" placeholder="Fasting blood sugar" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">restecg</span>
+                            <input type="text" name="restecg" placeholder="Resting electrocardiographics result" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">thalach</span>
+                            <input type="text" name="thalach" placeholder="thal" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">exang</span>
+                            <input type="text" name="exang" placeholder="excercise induded agina" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">oldpeak</span>
+                            <input type="text" name="oldpeak" placeholder="ST depression" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">slope</span>
+                            <input type="text" name="slope" placeholder="slope" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">ca</span>
+                            <input type="text" name="ca" placeholder="no. of major vessels" required="required" />
+                       </div>
+                       <div class="input-box">
+                            <span class="details">thal</span>
+                            <input type="text" name="thal" placeholder="Thalach value" required="required" />
+                        </div>
+                        <br>
+                        <br>
+                        {{ prediction_text }}
+                    </div>
+                        <div class="button">
+                            <input type="submit" value="PREDICT">
+                        </div>
+                        
+                       
+                   </form>    
+    </body>
+</html>
